@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Chong</title>
+    <meta name="description" content="Description of 100-150 characters"> <!--what search engines use to find your site-->
+    <meta name="keywords" content="your name, artist">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- use an import map to link to the Three.js CDN -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+          }
+        }
+      </script>
+
+     <!-- link to your Javascript file as a type="module", this will execute the file after the HTML is loaded-->
+      <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+   
+    <div class="content-wrapper">
+    <header>
+        
+    </header>
+    <main>
+        <section class="bio"></section>
+        <section class="project-section">
+            <div class="project"></div>
+            <div class="project"></div>
+            <div class="project"></div>
+        </section>
+        <div id="scene-container">
+
+        </div>
+    </main>
+    </div>
+
+
+    <footer>
+        <p>© 2023 by Ryan Chong | <a href="mailto:rchong527@gmail.com">email@example.com</a></p>
+        <ul class="socials">
+          <li>
+            <a href="#" target="_blank"><img src="assets/images/icon-logo-youtube.png" alt=""></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><img src="assets/images/icon-logo-linkedin.png" alt=""></a>
+          </li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basic Flex Setup</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1>Basic Flex Setup</h1>
+      <h2>Sticky footer and column setup</h2>
+    </header>
+    <main>
+      <section>
+        <p>And this is the basic flex setup!
+        </p>
+        <pre>
+          - body
+             > content-wrapper
+               - header
+               - main
+                   - section
+                   - section
+                   - section
+            > footer
+        </pre>
+        <p>
+          If you want a grid that wraps to a column on smaller screens), set the flex-direction for MAIN to row and flex-wrap to wrap, then change
+          justify-content to center your items. Next, set an initial width for each SECTION in the flex property (eg
+          'flex: 0 1 300px;' instead of 'flex: 0 1 auto').
+        </p> <br>
+        <p>^ you can customize this more using media queries</p>
+      </section>
+      <section>
+        <img src="assets/images/catComputer_2.jpg" alt="">
+        <p>Note that the images will scale up and down to the max width of the section, so you want to make sure your
+          image resolution is as least as wide as your section width.
+        </p>
+      </section>
+      <section>
+        <img src="assets/images/catComputer_1.png" alt="">
+        <p>This image is stretched beyond its native size.
+        </p>
+      </section>
+    </main>
+  </div>
+  <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+  <footer>
+    <p>© 2023 by Your Name | <a href="mailto:email@example.com">email@example.com</a></p>
+    <ul class="socials">
+      <li>
+        <a href="#" target="_blank"><img src="assets/images/icon-logo-instagram.png" alt=""></a>
+      </li>
+      <li>
+        <a href="#" target="_blank"><img src="assets/images/icon-logo-facebook.png" alt=""></a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>

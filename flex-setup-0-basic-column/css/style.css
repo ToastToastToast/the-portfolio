@@ -1,0 +1,155 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+body {
+    background: var(--offWhite);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    /* same as 16px using 62.5% fix for rem */
+    line-height: 1.6;
+}
+
+/* responsive images */
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Basic Flex Setup
+------------------------------ */
+
+/* Flexbox creates sticky footer for the homepage, since the content does not fill the whole page. You could do the same for the resume page to be consistent */
+
+body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    margin: 0 auto;
+
+    display: flex;
+    padding: 30px;
+    max-width: 900px;
+    flex-direction: column;
+}
+
+header {
+    background-color: burlywood;
+}
+
+main {
+    padding: 2rem;
+    background: beige;
+    display: flex;
+    flex-direction: column;
+    /* for a grid that wraps, change direction, row, and justify-content */
+    /* flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
+    /* delete gap if you would rather use margins */
+    gap: 50px;
+}
+
+section {
+    flex: 0 1 auto;
+    /* for a grid that wraps, set an initial size for each section in flex: */
+    /* flex: 0 1 200px; */
+    background-color: chartreuse;
+    padding: 2rem;
+    /* add margin if you don't want to use gap in flex container (main) */
+}
+
+
+/* media queries
+------------------------------ 
+
+customize these for your own breakpoints */
+
+
+@media screen and (max-width:650px) {
+ /* css for mobile here  */
+}
+
+
+
+
+
+/* FOOTER
+------------------------------ 
+
+sticky footer with flexbox
+breakpoints resize to mobile
+ */
+
+footer {
+    background: coral;
+    color: beige
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.socials img {
+    width: 32px;
+}
+
+.socials img:hover {
+    opacity: 0.5;
+}
+
+
+@media screen and (min-width: 860px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 859px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
