@@ -1,0 +1,54 @@
+/* media queries for mobile */
+
+
+/* home page =================*/
+
+@media (max-width:650px){
+    .loading-text{
+        font-size:40px;
+    }
+
+}
+
+
+/* about page ============== */
+
+@media (min-width:650px) and (max-width: 1300px){
+    #about-profile-image{
+        grid-column:8/12;
+    }
+}
+
+@media (max-width:650px){
+    #about-profile-image{
+        grid-column:1/11;
+        grid-row:2;
+    }
+
+    #about-profile-image img{
+        margin-top:0;
+    }
+
+    .about-section{
+        grid-column: 1 / 11;
+    }
+
+    
+}
+
+/*projects page */
+
+@media screen and (max-width: 425px) {
+    .filterable-cards{
+        grid-template-columns: 1fr;
+    }
+  }
+
+
+/* individual artwork pages */
+@media screen and (max-width: 425px) {
+    .project-main-image{
+        grid-column: 1 / -1;
+    }
+  }
+

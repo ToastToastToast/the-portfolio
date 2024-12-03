@@ -1,0 +1,85 @@
+
+/*
+CSS RESETS:
+border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+62.5% fix: https://www.aleksandrhovhannisyan.com/blog/62-5-precent-font-size-trick/
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+*:before,
+*:after{
+    box-sizing:inherit;
+    margin:0;
+    padding:0;
+}
+
+html, body{
+    height: 100%;
+ 
+}
+
+body{
+    font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+body{
+    background: black;
+}
+
+
+
+
+/*
+
+canvas{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#scene-container{
+    background-color: black;
+    margin: 0 auto;
+}*/
+
+
+
+/* 3js canvas */
+canvas{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#scene-container{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

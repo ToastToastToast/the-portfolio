@@ -1,0 +1,32 @@
+1am Youtube train //
+2am Sleep train //
+3am homework grind train procrastination //
+4am sleep pt1 //
+5am sleep pt2v //
+6am sleep pt3 
+7am squirrel train //
+8am Dog barking train //
+9am I wake up train //
+10am Breakfast Train // 
+11am Drive to train train //
+12pm Go to school train //
+1pm Inclass train //
+2pm Inclass pt2 train //
+3pm switch class train //
+4pm Take train home //
+5pm Drive home Train //
+6pm dog walk train //
+7pm dinner train //
+8pm Desert train //
+9pm video game train //
+10pm Homework train //
+11pm Doggy sleepv //
+12am Shower Train/Get ready for bed //
+
+I quickly update the rapid changes in technology 
+
+12a = 0
+11a = 1;
+
+h7 = 6
+h6 = 5 

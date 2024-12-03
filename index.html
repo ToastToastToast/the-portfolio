@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Chong</title>
-    <meta name="description" content="Description of 100-150 characters"> <!--what search engines use to find your site-->
-    <meta name="keywords" content="your name, artist">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Chong</title>
+  <meta name="description" content="Description of 100-150 characters"> <!--what search engines use to find your site-->
+  <meta name="keywords" content="your name, artist">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
 
-    <!-- use an import map to link to the Three.js CDN -->
-    <script type="importmap">
+  <!-- Fonts import   ---------------------->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geist+Mono:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- use an import map to link to the Three.js CDN -->
+  <script type="importmap">
         {
           "imports": {
             "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
@@ -19,40 +27,94 @@
         }
       </script>
 
-     <!-- link to your Javascript file as a type="module", this will execute the file after the HTML is loaded-->
-      <script type="module" src="js/main.js"></script>
+  <!-- link to your Javascript file as a type="module", this will execute the file after the HTML is loaded-->
+  <script type="module" src="js/main.js"></script>
+  <script src="js/loadingText.js"></script>
+  <script src="js/fadeIn.js"></script>
 </head>
+
+
+
+
+<!-- Beginning of HTML Page ------------------------------------->
 <body>
 
-   
-    <div class="content-wrapper">
+  <!-- Javascript background and spacing -->
+  <div id="scene-container">
+  </div>
+
+  <div class="grid-space-container">
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+  </div>
+
+
+<!-- Loading Text Zone -->
+<div id="text-container">
+  <div class="scroll-trigger"></div>
+  <h1 class="loading-text">Loading...</h1>
+</div>
+<div class="spacer"></div>
+<div class="scroll-endTrigger"></div>
+<div class="spacer"></div>
+
+
+
+<!-- Main Page  ---------------------------->
+<div class="home-grid-container fade-In hidden">
+
     <header>
-        
+      <h1 class="neon-h1text">
+        <span class="word">
+          <span class="colorScheme1">R</span>
+          <span class="colorScheme2">y</span>
+          <span class="colorScheme3">a</span>
+          <span class="colorScheme4">n</span>
+       </span>
+        <span> &nbsp;</span>
+        <span class="word">
+          <span class="colorScheme2">C</span>
+          <span class="colorScheme3">h</span>
+          <span class="colorScheme5">o</span>
+          <span class="colorScheme1">n</span>
+          <span class="colorScheme3">g</span>
+      </span>
+      </h1>
     </header>
-    <main>
-        <section class="bio"></section>
-        <section class="project-section">
-            <div class="project"></div>
-            <div class="project"></div>
-            <div class="project"></div>
-        </section>
-        <div id="scene-container">
 
-        </div>
+
+    <main class="main-grid">
+      <!--Portfolio Works-->
+      <section id="Project-Home-section">
+        <h2 class="colorScheme1 section-home-text red-textGlow">Check out my Projects</h2>
+
+        <a href="projects.html"><button id="project-button" class="button-redGlow">View Projects</button></a>
+      </section>
+
+       <!--About Me-->
+       <section id="AboutMe-Home-section">
+        <h2 class="colorScheme5 section-home-text purple-textGlow">Learn more About Me</h2>
+
+        <a href="about.html"><button id="about-button" class="button-purpleGlow">About Me</button></a>
+       </section>
+
+        <!--Contact-->
+      <section id="ContactMe-Home-section">
+        <h2 class="colorScheme3 section-home-text green-textGlow">Contact Me</h2>
+
+        <a href="contact.html"><button id="contact-button" class="button-greenGlow">Contact</button></a>
+      </section>
     </main>
-    </div>
 
 
-    <footer>
-        <p>© 2023 by Ryan Chong | <a href="mailto:rchong527@gmail.com">email@example.com</a></p>
-        <ul class="socials">
-          <li>
-            <a href="#" target="_blank"><img src="assets/images/icon-logo-youtube.png" alt=""></a>
-          </li>
-          <li>
-            <a href="#" target="_blank"><img src="assets/images/icon-logo-linkedin.png" alt=""></a>
-          </li>
-        </ul>
-    </footer>
+  
+
+  </div>
+  <footer>
+    <p>© 2023 by Ryan Chong | <a href="mailto:rchong527@gmail.com">rchong527@gmail.com</a></p>
+  </footer>
+<!-- End of Main page ------------------------->
+
 </body>
+
 </html>
