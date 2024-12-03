@@ -8,46 +8,15 @@ import * as THREE from 'three';
 // Import add-ons
 import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js'; // to load 3d models
+import { FirstPersonControls } from "../modules/FirstPersonControls.js";
 
 //Rapier stuff ====================================================
-
-import('@dimforge/rapier3d').then(RAPIER => {
-
-    //Use the rapier module here.
-    let gravity = {x: 0.0, y: -9.81, z:0.0};
-    let world = new RAPIER.World(gravity);
-
-    //Add phyiscal bodys=====================================
-    //Examples here--------------------
-    /*
-    //Dynamic body - affected by everything, for projectiles and other fun objects
-    const dynamicBody = RAPIER.RigidBodyDesc.dynamic();
-
-    //Static/Fixed body - affects dynamic bodies but isn't acted on by forces; for ground and walls
-    const staticBody = RAPIER.RigidBodyDesc.fixed();
-
-    //Kinetmatic/moveable body - not affected by physical forces but can be moved. For playerController and moving platforms
-    const kinematicPositionBody = RAPIER.RigidBodyDesc.kinematicPositionBased();
-    const kinematicVelocityBody = RAPIER.RigidBodyDesc.kinematicVelocityBased();
-    */
-    //End of Exampples -----------------
-
-
-
-    //Game Loop.
-    let gameLoop = () => {
-        //Step the simulation forward.
-        world.step();
-        setTimeout(gameLoop, 16);
-    };
-
-    gameLoop();
-})
 
 
 
 // ~~~~~~~~~~~~ Global Variables ~~~~~~~~~~~~~~~~~~~~~
-let scene, camera, renderer;
+let scene,renderer, camera;
+let fpsControls;
 let sceneContainer = document.querySelector("#scene-container");
 
 //global objects
@@ -102,41 +71,26 @@ function onWindowResize() {
 
 window.addEventListener('resize', onWindowResize, false);
 
-
-
 //call the initialize methods
 initialize();
+
+// FPS Controls =======================================================
+
+if(!camera){
+    console.error('no camera');
+}else{
+    fpsControls = new FirstPersonControls(camera, document.getElementById('scene-container'));
+}
+
+
+
+
 animate();
 
 // ~~~~~~~~~~~~~~~~ added models ~~~~~~~~~~~~~~~~
 //const controls = new OrbitControls(camera, renderer.domElement);
 
 const loader = new GLTFLoader(); // to load 3d models
-
-
-
-//RAPIER 3D EXAMPLE CODE =======================================================
-//dummey box model
-const box = {hx: 0.5, hy: 0.5, hz: 0.5};
-
-const threeMesh = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(box.hx * 2, box.hy * 2, box.hz * 2),
-    new MeshPhongMaterial({color:'red'})
-);
-scene.add(threeMesh);
-
-//Rapier add box
-const bodyType = RAPIER.RigidBodyDesc.dynamic();
-const rigidBody = world.createRigidBody(bodyType);
-const colliderType = RAPIER.ColliderDesc.cuboid(box.hx, box.hy, box.hz);
-world.createCollider(colliderType, rigidBody.handle);
-
-//store pairs
-//const bodys: {rigid: RigidBody, mesh: THREE.Mesh}
-
-
-//End of EXAMPLE CODE ==========================================================
-
 
 
 /*
@@ -231,6 +185,8 @@ loader.load('assets/television.glb', function (gltf) {
 
 
 
+fpsControls.lookSpeed = 0.0005;
+fpsControls.movementSpeed = 0.2;
 
 function animate() {
     //Get the time passed since the last frame
@@ -244,11 +200,12 @@ function animate() {
     requestAnimationFrame(animate);
     //lionMixer.update(clock.getDelta()); //handles looping the animation
 
-    //let scrollY = window.scrollY
-    //camera.position.z = scrollY * 0.01;
-
-
-
+    fpsControls.update(1.0);
+    //console.log(camera);
+   
+    
+   
+    
     renderer.render(scene, camera);
 }
 
@@ -257,7 +214,7 @@ function animate() {
 
 
 //Camera scrolling functionality
-
+/*
 function moveCamera() {
 
     const t = document.body.getBoundingClientRect().top;
@@ -295,7 +252,11 @@ function moveCamera() {
     console.log("t: " + t);
 }
 
-document.body.onscroll = moveCamera;
+//Enable the homepage camera movement
+if(window.location.pathname === 'index.html'){
+    document.body.onscroll = moveCamera;
+}
+*/
 
 
 
