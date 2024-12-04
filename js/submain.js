@@ -81,10 +81,17 @@ if(!camera){
 }else{
     fpsControls = new FirstPersonControls(camera, document.getElementById('scene-container'));
 }
+/*
+const spherePlayer = new THREE.Mesh(
+    new THREE.SphereGeometry(1,1,1),
+    new THREE.MeshPhongMaterial({Color:0xff0000})
+);
+spherePlayer.position.set(0,5,3);
 
-
-
-
+let spherePlayerBB = new THREE.Sphere3(new THREE.Vector3(), new THREE.Vector3());
+spherePlayerBB.setFromObject(spherePlayer);
+console.log(spherePlayerBB);
+*/
 animate();
 
 // ~~~~~~~~~~~~~~~~ added models ~~~~~~~~~~~~~~~~
@@ -187,6 +194,7 @@ loader.load('assets/television.glb', function (gltf) {
 
 fpsControls.lookSpeed = 0.0005;
 fpsControls.movementSpeed = 0.2;
+fpsControls.rotationSpeed = 3000;
 
 function animate() {
     //Get the time passed since the last frame
