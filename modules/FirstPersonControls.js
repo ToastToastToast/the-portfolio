@@ -346,13 +346,13 @@ function onKeyDown( event ) {
 		case 'ArrowRight':
 		case 'KeyD': this._moveRight = true; break;
 
-		case 'KeyR': this._moveUp = true; break;
-		case 'KeyF': this._moveDown = true; break;
+		//case 'KeyR': this._moveUp = true; break;
+		//case 'KeyF': this._moveDown = true; break;
 
 		case 'KeyJ': this._rotateLeft = true; break;
         case 'KeyL': this._rotateRight = true; break;
-        case 'KeyI': this._rotateUp = true; break;
-        case 'KeyK': this._rotateDown = true; break;
+        //case 'KeyI': this._rotateUp = true; break;
+        //case 'KeyK': this._rotateDown = true; break;
 
 	}
 
@@ -374,13 +374,13 @@ function onKeyUp( event ) {
 		case 'ArrowRight':
 		case 'KeyD': this._moveRight = false; break;
 
-		case 'KeyR': this._moveUp = false; break;
-		case 'KeyF': this._moveDown = false; break;
+		//case 'KeyR': this._moveUp = false; break;
+		//case 'KeyF': this._moveDown = false; break;
 
 		case 'KeyJ': this._rotateLeft = false; break;
         case 'KeyL': this._rotateRight = false; break;
-        case 'KeyI': this._rotateUp = false; break;
-        case 'KeyK': this._rotateDown = false; break;
+       // case 'KeyI': this._rotateUp = false; break;
+        //case 'KeyK': this._rotateDown = false; break;
 
 	}
 
