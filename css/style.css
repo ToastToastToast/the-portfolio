@@ -629,6 +629,12 @@ p.section-about-text{
 .project-main-image{
     grid-column: 3 / 11;
     margin:0;
+    justify-content: center;
+}
+
+img.main-image{
+    justify-content: center;
+    display:grid;
 }
 
 .text-container{
