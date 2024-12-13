@@ -8,6 +8,16 @@
         font-size:40px;
     }
 
+    .scroll-image-container{
+        top:10%;
+        left:15%;
+    }
+
+    .scroll-image{
+        width:10rem;
+        height:10rem;
+    }
+
 }
 
 
@@ -50,5 +60,22 @@
     .project-main-image{
         grid-column: 1 / -1;
     }
+
+ 
+
+
+  }
+
+  @media screen and (max-width: 650px){
+    .image-gallery{
+        grid-template-columns: 1fr;
+
+        grid-column:2/12;
+    }
+
+    .text-container{
+        font-size:1.6rem;
+        grid-column:2/12;
+       }
   }
 

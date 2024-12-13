@@ -241,6 +241,41 @@ canvas{
     position: relative;
 }
 
+/*loading icon */
+.scroll-image-container {
+    position: fixed;
+    top: 90%; 
+    left: 10%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    pointer-events: none;
+}
+
+.scroll-image {
+    width: 14rem; 
+    height: 14rem;
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+    
+}
+
+.scroll-image-animation{
+    animation: pulse-icon 5s infinite alternate;
+}
+
+@keyframes pulse-icon{
+    0%{
+        opacity:0;
+    }
+    30%,70%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+
+}
+
 /* vfx */
 
 .red-textGlow{
@@ -629,12 +664,13 @@ p.section-about-text{
 .project-main-image{
     grid-column: 3 / 11;
     margin:0;
-    justify-content: center;
+  
 }
 
-img.main-image{
-    justify-content: center;
-    display:grid;
+.project-main-image img {
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 .text-container{
@@ -660,7 +696,7 @@ img.main-image{
   
   .image-gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 30px;
     grid-column: 3 / 11;
@@ -818,7 +854,7 @@ img.main-image{
 }
 
 
-/* final project: place to call home css */
+
 
 
 
