@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Unica+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Imported fonts ============== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geist+Mono:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Ryan Chong - Alone</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css"/>
+  </head>
+
+  <body>
+    <!-- Header Section-->
+    
+
+    <div class="navbar-container">
+        <nav class="navbar">
+          <ul>
+            <li><a href="../index.html" class="nav-button">Home</a></li>
+            <li><a href="../about.html" class="nav-button">About</a></li>
+            <li><a href="../projects.html" class="nav-button">Projects</a></li>
+            <li><a href="../contact.html" class="nav-button">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="main-grid">
+        <section class="project-main-image">
+            <img src="../assets/images/alone/alien image.png" alt="Game title image">
+        </section>
+
+        <section class=text-container>
+            <h1>Alone</h1>
+            <br>
+            <h3>Description</h3>
+            <p>Tale of the Dragon's Mirage is  a 2d blaster game for the Global Game Jam 2025. With 3 other group members, RyanEAX, Solarmoth, and Dancloud, the group was challenged
+                with completing a game in only 2 days. Game Jam site hosted by San Jose State Uni. 
+            <br>
+            Spring 2025
+            </p>
+            <br>
+            <h3>Story & Background</h3>
+            <p>The jealous snake demon is trying to control the dragon’s territory by impersonating it and polluting its rivers. The dragon must reclaim its honor by using its bubbles to reveal the snake's plot and protect its home. In celebration of Chinese New Years 2025 - the Year of the Snake! </p>
+        </section>
+
+        <section class="open-project-container">
+            <a href="https://toasterdoggo.itch.io/alone"><button class="go-to-button">Play Game</button></a>
+        </section>
+
+        <section class="text-title">
+            <h2>Project Images</h2>
+        </section>
+
+     
+            <section class="image-gallery">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 172914.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 173040.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 173349.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 173637.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 173953.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 174340.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-14 183013.png">
+                <img src="../assets/images/alone/Screenshot 2024-11-26 170814.png">
+            </section>
+      
+       
+        
+  
+      </main>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 by Ryan Chong | <a href="mailto:rchong527@gmail.com">rchong527@gmail.com</a></p>
+      </footer>
+
+
+  </body>
+</html>
